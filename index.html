@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт web-студії Web-DECO</title>
     <!-- =================== JAVASCRIPT ==================-->
+    <script src="js/clock1.js"></script>
     <script type="text/javascript">
         function send()
         {
@@ -32,7 +33,6 @@
         }
     </script>
     <!--=====================================================================================-->
-    <!--===============  CSS STYLE  =====================-->
     <style>
         .shadowtext
         {
@@ -41,9 +41,14 @@
           font-size: 2em;  
         }
     </style>
+    <script>
+        window.onload=function()
+        {
+            setInterval(clockPainting, 1000);   
+        }
+    </script>
 </head>
 <body background="Images/bg.jpg">
-    <!--================= Каркас сайта =================-->
      <table border="1" algin="centre" cellpadding="10">
     <tr>
             <td colspan="2" height="150" align="right"><font size="5" color="Maroon"><h1 class="shadowtext">Сайт web-студії "Web-DECO"</h1></font>
@@ -59,12 +64,12 @@
                 <a href="#">Зареєстровані</a>&nbsp;&nbsp;
                 </b></font>   
         </td>
+
     </tr>
-    <tr>
-        <td colspan="2" valign="midle" height="90">(Низ сайта)</td>
-    </tr>
+    
     <tr>
        <td width="30%" valing="top">
+        <centre><canvas id="canvas" height="120" width="120"></canvas></centre>
         <font size="5" color="navy"><h2>Новини28</h2></font>
       <font size="5" ><ul>
       <li><a href="#">Сайт будіівельної компанії </a></li>
